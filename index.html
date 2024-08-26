@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Maquiagem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #9e3e5e;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            width: 40%;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 1rem 0;
+            background-color: #fff;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .product-info {
+            padding: 1rem;
+        }
+        .product-info h2 {
+            margin: 0 0 0.5rem;
+        }
+        .product-info p {
+            margin: 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            background-color: #b2305d;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #d81b60;
+        }
+        .details {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            border-top: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cátalogo de Maquiagem</h1>
+    </header>
+    <div class="container">
+        <div class="product">
+            <img src="https://images.tcdn.com.br/img/img_prod/752601/base_liquida_niina_secrets_hidra_glow_varias_cores_30ml_eudora_5490_1_45c9688d920b07970b457c74d518f73e.jpg" alt="Produto 1">
+            <div class="product-info">
+                <h2>Base Líquida</h2>
+                <p>Utilizada para a cobertura de imperfeições na pele, garantindo a proteção e uniformidade da pele.</p>
+                <button class="button" onclick="toggleDetails('details1')">Mais detalhes</button>
+                <div id="details1" class="details">
+                    <p> FPS 30 UVA++, hidrata por até 24 horas e controla a oleosidade.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/E93701/E93701_b.jpg" alt="Produto 2">
+            <div class="product-info">
+                <h2>Máscara para Cílios</h2>
+                <p>Utilizado para aumentar e dar curvatura para os Cílios.</p>
+                <button class="button" onclick="toggleDetails('details2')">Mais detalhes</button>
+                <div id="details2" class="details">
+                    <p>píncel com fibras, que preenchem os fios, volume e curvatura, com óleo de rosas e vitaminas.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://acdn.mitiendanube.com/stores/001/145/162/products/1029146_paleta-de-sombras-top-secrets-niina-secrets-by-eudora_l3_6381442276476992761-b3792665daebe26ece16796788268789-640-0.png" alt="Produto 3">
+            <div class="product-info">
+                <h2>Paleta de Sombras</h2>
+                <p>As paletas de sombras podem dar mais profundidade e dimensão aos olhos.</p>
+                <button class="button" onclick="toggleDetails('details3')">Mais detalhes</button>
+                <div id="details3" class="details">
+                    <p>Diferentes tipos de acabamento, alta fixação, alta pigmentação.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
